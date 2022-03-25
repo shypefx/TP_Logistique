@@ -1,6 +1,9 @@
 pragma solidity ^0.6.12;
 
-import "../OpenZeppelin/Ownable.sol";
+import "./Ownable.sol";
+
+// SPDX-License-Identifier: GPL-3.0
+
 
 contract Whitelist is Ownable{
 
