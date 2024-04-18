@@ -1,0 +1,155 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
+					}
+				],
+				"name": "WhitelistUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "whitelisted_bool",
+						"type": "bool"
+					}
+				],
+				"name": "updateWhitelist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whitelist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/WhitelistManagement.sol": "WhitelistManagement"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/OwnershipManagement.sol": {
+			"keccak256": "0x2934e16f99496afa39cd4be134c7d59329695c050c5922fdaa461103151005a4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a76674db87fcdad3c5d2c1887143f88439b548b258c6aed5e568b9912414bb9d",
+				"dweb:/ipfs/QmQYmacD9SPWxaJ1L9pL59zAKKxpDPamV4HM1YbZYbtDoK"
+			]
+		},
+		"contracts/WhitelistManagement.sol": {
+			"keccak256": "0xe85f07dc3b1bff75cabc9afdc376f7d67af502a64bbca2cc612ac591e6b559bb",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49164d287c292b30389c8a5b0e1addba93607bea257b609c56e61db48e8ac1a0",
+				"dweb:/ipfs/QmYpYrDBFTedmHNaRXdKS1t8U52sJkiCw6qF1oXwRFWuTY"
+			]
+		}
+	},
+	"version": 1
+}
