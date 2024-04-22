@@ -1,0 +1,337 @@
+{
+	"compiler": {
+		"version": "0.8.25+commit.b61c2a91"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "string",
+						"name": "lotId",
+						"type": "string"
+					}
+				],
+				"name": "ProductUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
+					}
+				],
+				"name": "WhitelistUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_lotId",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_manufacturer",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_lotNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_productName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_totalProductsInLot",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_lastOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_purchaseDate",
+						"type": "uint256"
+					}
+				],
+				"name": "addOrUpdateProduct",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_lotId",
+						"type": "string"
+					}
+				],
+				"name": "getProduct",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "manufacturer",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "lotNumber",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "productName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "lotId",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "totalProductsInLot",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "lastOwner",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "purchaseDate",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct ProductManagement.Product",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "products",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "manufacturer",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "lotNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "productName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "lotId",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalProductsInLot",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "lastOwner",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "purchaseDate",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "participant",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "isWhitelisted",
+						"type": "bool"
+					}
+				],
+				"name": "updateWhitelist",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "whitelist",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ProductTraceability.sol": "ProductTraceability"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/OwnershipManagement.sol": {
+			"keccak256": "0x63204ee5fa1fd7530ecb8e99b96c7b805fdfc96dc0775989449c3cde2b9b92ab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8c43080b7a9419109fb27b23f9b3e67f6c6c511a7b8586cbdcb5c6940b759995",
+				"dweb:/ipfs/QmWXfctUUzfoTQ5mTTuf7AbEy9E7EEAxMTmd5Y7sQMkitg"
+			]
+		},
+		"contracts/ProductManagement.sol": {
+			"keccak256": "0x8119679d3c913491ee63175a9824f1e1f106952e5788ee59e6d5604fb7350543",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://85ca7fb8554501262cac97829de0172943a8cd3b067e7a7b425ef017a2db33e5",
+				"dweb:/ipfs/QmWnzBP5dDYjqkegYMKDUUcFTaNUXKWivnFXAT5thuvDjV"
+			]
+		},
+		"contracts/ProductTraceability.sol": {
+			"keccak256": "0x232d1947af6a5b964fd2b404737c37552685629af83d6f25eeadac45df62b8f5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5bbb570527ecf5e1105a3c201ba03ac2e8a4109e8a934cb39619a7b60a969b67",
+				"dweb:/ipfs/QmRTF1cZMdpP91M2JghJsTW5KiYw4Bg3mgm7dx6pypXYgx"
+			]
+		},
+		"contracts/WhitelistManagement.sol": {
+			"keccak256": "0x3d6fbeda6373efd2460db5264ccb5a4af55c7cae1de8fbd24f47299b3e9f40cf",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://49ff4229cef0781d0d51795f449caa8e50e0201a0b1474139f83e23643d0d4b0",
+				"dweb:/ipfs/Qmc9G5RizRbW8eUWUZkTWAHuAajwGRox1uqNTvJmJ7TgDK"
+			]
+		}
+	},
+	"version": 1
+}
