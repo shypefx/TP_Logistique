@@ -13,11 +13,19 @@ contract WhitelistManagement is OwnershipManagement {
         _;
     }
 
-    function updateWhitelist(address participant, bool whitelisted_bool) public onlyOwner {
-        whitelist[participant] = whitelisted_bool;
-        emit WhitelistUpdated(participant, whitelisted_bool);
+    constructor() {
+        whitelist[msg.sender] = true;
     }
 
-    // onlyWhitelist could add personn
-    // OnlyOwner is allow to remove or update the list
+    function addWhitelistMember(address newMember) public isWhitelisted {
+        require(!whitelist[newMember], "Member already whitelisted");
+        whitelist[newMember] = true;
+        emit WhitelistUpdated(newMember, true);
+    }
+
+    function updateWhitelist(address participant, bool boolWhitelisted) public onlyOwner {
+        require(whitelist[participant] != boolWhitelisted, "No change required");
+        whitelist[participant] = boolWhitelisted;
+        emit WhitelistUpdated(participant, boolWhitelisted);
+    }
 }
